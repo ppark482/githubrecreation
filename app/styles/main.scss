@@ -1,0 +1,140 @@
+ // Bourbon & Neat
+@import '../../bower_components/bourbon/dist/bourbon';
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
+
+// Custom Styles
+body {
+  font: Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.container {
+  min-width: 1000px;
+}
+
+// Header Bar Across Top
+
+.header {
+  background-color: HSLA(0, 0%, 96%, 1);
+  border-bottom: 1px solid HSLA(0, 0%, 90%, 1);
+  height: 60px;
+  padding-top: 10px;
+  div {
+    display: inline;
+  }
+}
+.headerContent {
+  width: 980px;
+  margin-left: 190px;
+  margin-right: 190px;
+  height: 30px;
+}
+.smallUser, .navImages {
+  /* float: right;
+  overflow: auto; */
+}
+.searchBar input {
+  position: relative;
+  width: 360px;
+  height: 30px;
+  font-size: 12px;
+  vertical-align: center;
+  color: HSLA(0, 0%, 66%, 1);
+  padding-left: 10px;
+  border-radius: 3px;
+}
+.exploreLinks {
+  a {
+    text-decoration: none;
+    color: HSLA(0, 0%, 20%, 1);
+    padding: 4px 6px;
+  }
+  font-size: 11px;
+  font-weight: bold;
+  margin-right: 75px;
+}
+
+.smallUser {
+  display: inline-block;
+  max-width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+  font-size: 11px;
+  font-weight: bold;
+}
+.navImages {
+  padding: 5px;
+  span {
+    padding: 6px;
+  }
+}
+// Main Content Start
+.mainContent {
+  width: 980px;
+  margin-top: 20px;
+}
+// Start Sidebar
+.sideBar {
+  width: 230px;
+  height: 100%;
+  margin-left: 190px;
+}
+.avatar {
+  border-radius: 6px;
+}
+h1 {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 26px;
+}
+h3 {
+  font-size: 15px;
+}
+.nameBox {
+  span {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+.userStats {
+  ul {
+    padding: 0;
+  }
+  li{
+    list-style-type: none;
+  }
+  .octicon {
+    padding-right: 10px;
+  }
+  font-size: 14px;
+}
+.nameBox, .userStats, .followerCard, {
+  border-bottom: 1px solid HSLA(0, 0%, 93%, 1);
+  padding-bottom: 20px;
+}
+.followerCard {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.counterOne, .counterTwo, .counterThree {
+  width: 70px;
+  height: 28px;
+  padding: 0px;
+  margin: 0px auto;
+  display: inline-block;
+  color: HSLA(210, 53%, 51%, 1);
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+.followersOne, .starred, .followersTwo {
+  font-size: 11px;
+  padding: 0px 15px;
+  margin: 0px auto;
+  display: inline-block;
+  color: HSLA(240, 5%, 62%, 1);
+}
