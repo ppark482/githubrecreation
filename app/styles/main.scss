@@ -20,6 +20,9 @@ body {
   div {
     display: inline;
   }
+  .mega-octicon {
+    font-size: 28px;
+  }
 }
 .headerContent {
   width: 980px;
@@ -28,8 +31,13 @@ body {
   height: 30px;
 }
 .smallUser, .navImages {
-  /* float: right;
-  overflow: auto; */
+  vertical-align: 1px;
+}
+.octicon-triangle-down {
+  font-size: 10px;
+  padding-left: 3px;
+  margin-left: 0px;
+  vertical-align: 1px;
 }
 .searchBar input {
   position: relative;
@@ -47,7 +55,7 @@ body {
     color: HSLA(0, 0%, 20%, 1);
     padding: 4px 6px;
   }
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   margin-right: 75px;
 }
@@ -59,8 +67,12 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: top;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
+  img {
+    height: 25px;
+    vertical-align: -8px;
+  }
 }
 .navImages {
   padding: 5px;
@@ -71,13 +83,15 @@ body {
 // Main Content Start
 .mainContent {
   width: 980px;
-  margin-top: 20px;
+  margin: 20px auto;
+  display: block;
+  overflow: auto;
 }
 // Start Sidebar
 .sideBar {
   width: 230px;
   height: 100%;
-  margin-left: 190px;
+  float: left;
 }
 .avatar {
   border-radius: 6px;
@@ -97,6 +111,11 @@ h3 {
     font-size: 20px;
     font-weight: 300;
     font-style: normal;
+  }
+  img {
+    border-radius: 6px;
+    width: 230px;
+    height: 230px;
   }
 }
 .userStats {
@@ -137,4 +156,31 @@ h3 {
   margin: 0px auto;
   display: inline-block;
   color: HSLA(240, 5%, 62%, 1);
+}
+// Start Middle Content
+.middleContent {
+  width: 540px;
+  overflow: hidden;
+  float: right;
+  margin-left: 20px;
+}
+.middleNav {
+  display: inline;
+  overflow: hidden;
+  float: right;
+  p {
+    display: inline-block;
+  }
+  button {
+    width: 107px;
+    font-size: 12px;
+    padding-left: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+    text-decoration: none;
+    white-space: nowrap;
+    background-image: linear-gradient(#eee, #ddd);
+    border-color: HSLA(0, 0%, 80%, 1);
+  }
 }

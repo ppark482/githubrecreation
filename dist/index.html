@@ -7,20 +7,11 @@
     <title>Git Repository Recreation</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-    <link rel="stylesheet" href="images/octicons/octicons.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/vendor.css">
 
-    <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="../bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+    <script src="scripts/vendor/modernizr.js"></script>
   </head>
   <body>
 
@@ -38,7 +29,7 @@
             <a href="#">Help</a>
           </div> <!-- end exploreLinks -->
           <div class="smallUser">
-            <span></span>
+            <span>ppark482</span>
           </div> <!-- end of smallUser -->
           <div class="navImages">
             <span class="octicon octicon-plus"><label class="octicon octicon-triangle-down"></label>
@@ -51,10 +42,16 @@
         </div> <!-- end of header content -->
       </div> <!-- end of header bar -->
       <div class="mainContent"> <!-- Start of Body Container -->
-        <div class="sideBar"> <!-- Start of Sidebar -->       <div class="nameBox">
+        <div class="sideBar"> <!-- Start of Sidebar -->
+          <img alt="" class="avatar" data-user="8863462" height="230" src="https://avatars2.githubusercontent.com/u/8863462?v=2&amp;s=460" width="230">
+          <div class="nameBox">
+            <h1>Paul Park</h1>
+            <span></span>
           </div>
           <div class="userStats">
             <ul>
+              <li><span class="octicon octicon-link"></span><a href="#">Website</a></li>
+              <li><span class="octicon octicon-clock"></span><span>Joined on Sept 22, 2014</span>
             </ul>
           </div> <!-- end user stats -->
           <div class="followerCard">
@@ -95,34 +92,19 @@
 
         </div> <!-- end of middleContent -->
       </div> <!-- end of mainContent -->
+
+
+
+
+
+
+
     </div> <!-- end of container -->
 
-    <script id="user_header" type="text/template">
-      <img src="<%= avatar_url %>" />
-      <span><%= login %></span>
-    </script>
-
-    <script id="sidebar_user" type="text/template">
-      <img src="<%= avatar_url %>" />
-      <h1><%= name %></h1>
-      <span><%= login %></span>
-    </script>
-
-    <script id="sidebar_stats" type="text/template">
-      <li><span class="octicon octicon-link"></span><a href="#"><%= blog %></a></li>
-      <li><span class="octicon octicon-clock"></span><span>Joined on <%= created_at %></span>
-    </script>
 
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/underscore/underscore.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="scripts/vendor.js"></script>
         <script src="scripts/token.js"></script>
-        <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
-        <!-- endbuild -->
 </body>
 </html>
