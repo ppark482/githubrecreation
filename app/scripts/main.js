@@ -24,9 +24,11 @@ $.getJSON(url).done( function (user_data) {
 var sidebar_template = $('#sidebar_user').html(),
     sidebar_render = _.template(sidebar_template),
     sidestat_template = $('#sidebar_stats').html(),
-    sidestat_render = _.template(sidestat_render);
+    sidestat_render = _.template(sidestat_template)
+    sidefoll_template = $('#side_followers').html(),
+    sidefoll_render = _.template(sidefoll_template);
 
 $.getJSON(url).done( function (user_data) {
   $('.nameBox').append(sidebar_render(user_data));
-  $('.userStats ul').append(sidestat_render(user_data));
+  $('.userStats ul').append(sidestat_render(user_data));   $('.followerCounter').append(sidefoll_render(user_data));
 });

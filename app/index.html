@@ -59,9 +59,6 @@
           </div> <!-- end user stats -->
           <div class="followerCard">
             <div class="followerCounter">
-              <div class="counterOne">0</div>
-              <div class="counterTwo">0</div>
-              <div class="counterThree">0</div>
             </div>
             <div class="followerText">
               <div class="followersOne">Followers</div>
@@ -71,6 +68,7 @@
           </div>
           <div class="organizations">
             <h3>Organizations</h3>
+            <!-- YOU ARE HERE YOU ARE HERE YOU ARE HERE -->
             <div class="orgImgs">
               <img alt="Front End Engineering" class="avatar" data-user="7996991" height="42" src="https://avatars2.githubusercontent.com/u/7996991?v=2&amp;s=84" width="42">
             </div> <!-- end orgImgs -->
@@ -113,6 +111,11 @@
       <li><span class="octicon octicon-clock"></span><span>Joined on <%= created_at %></span>
     </script>
 
+    <script id="side_followers" type="text/template">
+      <div class="counterOne"><%= followers %></div>
+      <div class="counterTwo">0</div>
+      <div class="counterThree"><%= following %></div>
+    </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
