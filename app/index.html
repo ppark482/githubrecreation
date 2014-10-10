@@ -59,7 +59,9 @@
           </div> <!-- end user stats -->
           <div class="followerCard">
             <div class="followerCounter">
+              
             </div>
+
             <div class="followerText">
               <div class="followersOne">Followers</div>
               <div class="starred">Starred</div>
@@ -108,12 +110,6 @@
 
 
 
-
-
-
-
-
-
         </div> <!-- end of middleContent -->
       </div> <!-- end of mainContent -->
     </div> <!-- end of container -->
@@ -135,10 +131,15 @@
     </script>
 
     <script id="side_followers" type="text/template">
-      <div class="counterOne"><%= followers %></div>
-      <div class="counterTwo">0</div>
+      <div class="counterOne">
+        <%= followers %></div>
+      <div class="counterTwo"></div>
       <div class="counterThree"><%= following %></div>
     </script>
+
+    <!-- <script id="stargaze_count" type="text/template">
+      <%= stargazers_count %>
+    </script> -->
 
     <script id="allRepositories" type="text/template">
         <li>
