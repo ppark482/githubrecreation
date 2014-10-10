@@ -77,11 +77,34 @@
         <div class="middleContent">
           <div class="middleNav">
             <p><span class="octicon octicon-diff-added"></span>Contributions</p>
-            <p><span class="octicon octicon-repo"></span>Repositories</p>
+            <p id="activeTab"><span class="octicon octicon-repo"></span>Repositories</p>
             <p><span class="octicon octicon-rss"></span>Public Activity</p>
             <button><span class="octicon octicon-pencil"></span>Edit Profile</button>
           </div> <!-- end of middleNav -->
+          <div class="searchNavBar">
+            <input type="text" value="Find a respository..." id="navSearch">
+            <input type="submit" value="Search" id="navSearchButton">
+            <div class="middleLinks">
+              <a href="">All</a>
+              <a href="">Public</a>
+              <a href="">Private</a>
+              <a href="">Sources</a>
+              <a href="">Forks</a>
+              <a href="">Mirrors</a>
+              <a href="/repositories/new" class="button primary new-repo">
+                <span class="octicon octicon-repo">
+                </span>
+                New
+              </a>
+            </div> <!-- end of middleLinks -->
+          </div><!-- end of searchNavBar -->
+          <div class="repositories">
+            <div class="repoTitle">
+              <ul></ul>
+            </div>
 
+          </div> <!-- end of repositories -->
+          </div>
 
 
 
@@ -115,6 +138,20 @@
       <div class="counterOne"><%= followers %></div>
       <div class="counterTwo">0</div>
       <div class="counterThree"><%= following %></div>
+    </script>
+
+    <script id="allRepositories" type="text/template">
+        <li>
+          <h3><%= name %></h3>
+          <p class="updatedTime">
+            Updated
+            <time>18 hours ago</time>
+          </p>
+          <p class="repoInfoRight">
+            <span><%= language %></span>
+            <span><span class="octicon octicon-star"></span><%= stargazers_count %></span>
+            <span><span class="octicon octicon-git-branch"></span><%= forks_count %></span>
+        </li>
     </script>
 
     <!-- build:js scripts/vendor.js -->
