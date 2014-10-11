@@ -57,7 +57,7 @@ body {
   }
   font-size: 12px;
   font-weight: bold;
-  margin-right: 75px;
+  margin-right: 195px;
 }
 
 .smallUser {
@@ -192,10 +192,12 @@ h3 {
     width: 132px;
     margin-right: 10px;
     border-bottom: 1px solid white;
+    color: HSLA(0, 0%, 40%, 1);
   }
   #activeTab {
     border-bottom: 1px solid white;
     background-color: white;
+    color: black;
   }
   button {
     width: 105px;
