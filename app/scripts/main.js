@@ -36,6 +36,11 @@ $.getJSON(starURL).done( function (user_data) {
     $('.counterTwo').html(starCount);
 });
 
+$.getJSON(starURL).done( function (user_data) {
+    var starCount = user_data.length;
+    $('.counterTwo').html(starCount);
+});
+
 var repo_template = $('#allRepositories').html(),
     repo_render = _.template(repo_template);
 
