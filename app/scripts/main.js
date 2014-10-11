@@ -1,19 +1,11 @@
 var url = 'https://api.github.com/users/ppark482';
 var repoURL = 'https://api.github.com/users/ppark482/repos';
 var starURL =
-'https://api.github.com/users/ppark482/starred'
-// var userName = '<%= login %>';
+'https://api.github.com/users/ppark482/starred';
 //
-// var userNameR = _.template(userName);
-//
-// var userNameF = userNameR({ login: 'ppark482'});
-//
-$.getJSON(url).done( function (user_data) {
-  console.log(user_data);
-});
-//
-// $('.nameBox span').html(userNameF);
-// this works and replaces both name and username on the page
+// $.getJSON(url).done( function (user_data) {
+//   console.log(user_data);
+// });
 
 var user_template = $('#user_header').html(),
     user_render = _.template(user_template);
