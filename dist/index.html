@@ -32,8 +32,8 @@
             <span></span>
           </div> <!-- end of smallUser -->
           <div class="navImages">
-            <span class="octicon octicon-plus"><label class="octicon octicon-triangle-down"></label>
-</span>
+            <span class="octicon octicon-plus">
+              <label class="octicon octicon-triangle-down"></label></span>
             <span class="octicon octicon-inbox"></span>
             <span class="octicon octicon-gear"></span>
             <span class="octicon octicon-sign-out"></span>
@@ -42,7 +42,8 @@
         </div> <!-- end of header content -->
       </div> <!-- end of header bar -->
       <div class="mainContent"> <!-- Start of Body Container -->
-        <div class="sideBar"> <!-- Start of Sidebar -->       <div class="nameBox">
+        <div class="sideBar"> <!-- Start of Sidebar -->
+          <div class="nameBox">
           </div>
           <div class="userStats">
             <ul>
@@ -50,15 +51,14 @@
           </div> <!-- end user stats -->
           <div class="followerCard">
             <div class="followerCounter">
-              
-            </div>
+            </div> <!-- end followerCounter -->
 
             <div class="followerText">
               <div class="followersOne">Followers</div>
               <div class="starred">Starred</div>
               <div class="followersTwo">Following</div>
-            </div>
-          </div>
+            </div> <!-- end followerText -->
+          </div> <!-- end followerCard -->
           <div class="organizations">
             <h3>Organizations</h3>
             <!-- YOU ARE HERE YOU ARE HERE YOU ARE HERE -->
@@ -97,12 +97,31 @@
             </div>
 
           </div> <!-- end of repositories -->
-          </div>
-
-
 
         </div> <!-- end of middleContent -->
+        <div class="footer"> <!-- start of footer -->
+          <ul class="leftFootNav">
+            <li>© 2014 <span title="0.02299s from github-fe129-cp1-prd.iad.github.net">GitHub</span>, Inc.
+            </li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+          <ul class="rightFootNav">
+            <li><a href="#">Status</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Training</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div> <!-- end of footer -->
       </div> <!-- end of mainContent -->
+
+
+
     </div> <!-- end of container -->
 
     <script id="user_header" type="text/template">
@@ -113,36 +132,36 @@
     <script id="sidebar_user" type="text/template">
       <img src="<%= avatar_url %>" />
       <h1><%= name %></h1>
-      <span><%= login %></span>
+      <span class="loginName"><%= login %></span>
     </script>
 
     <script id="sidebar_stats" type="text/template">
-      <li><span class="octicon octicon-link"></span><a href="#"><%= blog %></a></li>
-      <li><span class="octicon octicon-clock"></span><span>Joined on <%= created_at %></span>
+      <li class="blogLink"><span class="octicon octicon-link"></span><a href="#"><%= blog %></a></li>
+      <li><span class="octicon octicon-clock"></span>Joined on <%= $.format.date(created_at, "MMM d, yyyy") %>
     </script>
 
     <script id="side_followers" type="text/template">
       <div class="counterOne">
         <%= followers %></div>
-      <div class="counterTwo"></div>
-      <div class="counterThree"><%= following %></div>
+      <div class="counterTwo">
+        </div>
+      <div class="counterThree"><%= following %>
+        </div>
     </script>
 
-    <!-- <script id="stargaze_count" type="text/template">
-      <%= stargazers_count %>
-    </script> -->
+    <script id="stargaze_count" type="text/template">
+      <div class="counterTwo"><%= stargazers_count %></div>
+    </script>
 
     <script id="allRepositories" type="text/template">
         <li>
           <h3><%= name %></h3>
-          <p class="updatedTime">
-            Updated
-            <time>18 hours ago</time>
-          </p>
           <p class="repoInfoRight">
             <span><%= language %></span>
             <span><span class="octicon octicon-star"></span><%= stargazers_count %></span>
             <span><span class="octicon octicon-git-branch"></span><%= forks_count %></span>
+            <p class="updatedTime">Updated <%= $.format.prettyDate(updated_at) %></p>
+          </p>
         </li>
     </script>
 
